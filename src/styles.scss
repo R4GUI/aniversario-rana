@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables globales */
+:root {
+    --primary-color: #ff69b4;
+    --primary-dark: #d14c96;
+    --primary-light: #ffb6c1;
+    --secondary-color: #8a2be2;
+    --secondary-light: #9966cc;
+    --text-color: #333;
+    --text-light: #555;
+    --background-color: #f8f5fa;
+    --white: #ffffff;
+    --black: #000000;
+    --heart-color: #ff69b4;
+  }
+  
+  /* Estilos globales */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animaciones globales */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+  
+  /* Estilos para botones genéricos */
+  button {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  /* Estilos para scroll */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }

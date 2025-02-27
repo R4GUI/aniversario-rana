@@ -43,7 +43,7 @@
       </button>
       
       <p class="love-message">
-        {{ isInfinite ? 'Mi amor por ti es infinito y crece cada día más' : 'Te amo un ' + loveLevel + '%' }}
+        {{ isInfinite ? 'Mi amor por ti es infinito y crece cada día más' : 'Te amo un ' + loveLevel + '% Mi Hermosa Ranita' }}
       </p>
     </div>
     <div class="section-decoration bottom-decoration"></div>
@@ -114,96 +114,96 @@
     <div class="section-decoration bottom-decoration"></div>
   </section>
 
-<!-- Sección de Galería con imágenes de Imgur (versión solo HTML) -->
-<section id="photos" class="app-section">
-  <div class="section-decoration top-decoration"></div>
-  <h2 class="section-title">
-    <i class="fas fa-camera-retro pulse-icon"></i> 
-    Nuestros Momentos 
-    <i class="fas fa-camera-retro pulse-icon"></i>
-  </h2>
-  
-  <div class="gallery-container">
-    <div class="gallery-intro">
-      <p>Algunos de nuestros recuerdos favoritos juntos</p>
+  <!-- Sección de Galería con imágenes locales -->
+  <section id="photos" class="app-section">
+    <div class="section-decoration top-decoration"></div>
+    <h2 class="section-title">
+      <i class="fas fa-camera-retro pulse-icon"></i> 
+      Nuestros Momentos 
+      <i class="fas fa-camera-retro pulse-icon"></i>
+    </h2>
+    
+    <div class="gallery-container">
+      <div class="gallery-intro">
+        <p>Algunos de nuestros recuerdos favoritos juntos</p>
+      </div>
+      
+      <div class="photo-gallery">
+        <!-- Soporte para modo offline -->
+        <ng-container *ngIf="isOnline; else offlineGallery">
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita1.jpg" alt="Momento especial 1" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita2.jpg" alt="Momento especial 2" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita3.jpg" alt="Momento especial 3" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita4.jpg" alt="Momento especial 4" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita5.jpg" alt="Momento especial 5" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="photo-card">
+              <img src="../assets/images/ranita6.jpg" alt="Momento especial 6" class="gallery-img">
+              <div class="photo-overlay">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #offlineGallery>
+          <div class="offline-gallery-message">
+            <i class="fas fa-wifi-slash"></i>
+            <p>Estás en modo offline. Las fotos estarán disponibles cuando te conectes a internet.</p>
+            <p>¡Pero nuestros recuerdos siempre están en nuestros corazones! ❤️</p>
+          </div>
+        </ng-template>
+      </div>
     </div>
     
-    <div class="photo-gallery">
-      <!-- Soporte para modo offline -->
-      <ng-container *ngIf="isOnline; else offlineGallery">
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/lcAtZ5H.jpeg" alt="Momento especial 1" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/bG8XSkw.jpeg" alt="Momento especial 2" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/mcMOBj6.jpeg" alt="Momento especial 3" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/XxI0dE1.jpeg" alt="Momento especial 4" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/p5kqmLX.jpeg" alt="Momento especial 5" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <div class="photo-card">
-            <img src="https://i.imgur.com/vCfA64W.jpeg" alt="Momento especial 6" class="gallery-img">
-            <div class="photo-overlay">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-        </div>
-      </ng-container>
-      <ng-template #offlineGallery>
-        <div class="offline-gallery-message">
-          <i class="fas fa-wifi-slash"></i>
-          <p>Estás en modo offline. Las fotos estarán disponibles cuando te conectes a internet.</p>
-          <p>¡Pero nuestros recuerdos siempre están en nuestros corazones! ❤️</p>
-        </div>
-      </ng-template>
-    </div>
-  </div>
-  
-  <div class="section-decoration bottom-decoration"></div>
-</section>
+    <div class="section-decoration bottom-decoration"></div>
+  </section>
 
   <!-- Reasons Section -->
   <section id="reasons" class="app-section">
     <div class="section-decoration top-decoration"></div>
     <h2 class="section-title">
       <i class="fas fa-smile-beam pulse-icon"></i> 
-      Razones Por Las Que Te Amo 
+      Razones Por Las Que Te Amo
       <i class="fas fa-smile-beam pulse-icon"></i>
     </h2>
     
@@ -219,56 +219,56 @@
     <div class="section-decoration bottom-decoration"></div>
   </section>
 
-<!-- Sección de Canción Actualizada con reproductor a tamaño completo -->
-<section id="songs" class="app-section">
-  <div class="section-decoration top-decoration"></div>
-  <h2 class="section-title">
-    <i class="fas fa-music pulse-icon"></i> 
-    Canción que me recuerda a Ti
-    <i class="fas fa-music pulse-icon"></i>
-  </h2>
-  
-  <div class="songs-container">
-    <div class="song-card">
-      <div class="song-info">
-        <div class="song-cover">
-          <img [src]="song.cover" alt="{{song.title}} cover">
-        </div>
-        <div class="song-details">
-          <h3 class="song-title">{{song.title}}</h3>
-          <p class="song-artist">{{song.artist}}</p>
-        </div>
-      </div>
-      <div class="song-player">
-        <!-- Soporte para modo offline -->
-        <ng-container *ngIf="isOnline; else offlinePlayer">
-          <!-- Reproductor Spotify a tamaño completo -->
-          <iframe 
-            style="border-radius:12px" 
-            src="https://open.spotify.com/embed/track/1TdaQqgKRbiFdO15q1kv6e?utm_source=generator" 
-            width="100%" 
-            height="352" 
-            frameBorder="0" 
-            allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-          </iframe>
-        </ng-container>
-        <ng-template #offlinePlayer>
-          <div class="offline-player">
-            <i class="fas fa-wifi-slash"></i>
-            <p>Estás en modo offline. La canción estará disponible cuando te conectes a internet.</p>
-            <p class="offline-song-info">"{{song.title}}" - {{song.artist}}</p>
+  <!-- Sección de Canción Actualizada con reproductor a tamaño completo -->
+  <section id="songs" class="app-section">
+    <div class="section-decoration top-decoration"></div>
+    <h2 class="section-title">
+      <i class="fas fa-music pulse-icon"></i> 
+      Canción que me recuerda a Ti
+      <i class="fas fa-music pulse-icon"></i>
+    </h2>
+    
+    <div class="songs-container">
+      <div class="song-card">
+        <div class="song-info">
+          <!-- <div class="song-cover">
+            <img [src]="song.cover" alt="{{song.title}} cover">
+          </div> -->
+          <div class="song-details">
+            <h3 class="song-title">{{song.title}}</h3>
+            <p class="song-artist">{{song.artist}}</p>
           </div>
-        </ng-template>
-      </div>
-      <div class="song-message">
-        "Esta canción me recuerda a ti cada vez que la escucho..."
+        </div>
+        <div class="song-player">
+          <!-- Soporte para modo offline -->
+          <ng-container *ngIf="isOnline; else offlinePlayer">
+            <!-- Reproductor Spotify a tamaño completo -->
+            <iframe 
+              style="border-radius:12px" 
+              src="https://open.spotify.com/embed/track/1TdaQqgKRbiFdO15q1kv6e?utm_source=generator" 
+              width="100%" 
+              height="352" 
+              frameBorder="0" 
+              allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+            </iframe>
+          </ng-container>
+          <ng-template #offlinePlayer>
+            <div class="offline-player">
+              <i class="fas fa-wifi-slash"></i>
+              <p>Estás en modo offline. La canción estará disponible cuando te conectes a internet.</p>
+              <p class="offline-song-info">"{{song.title}}" - {{song.artist}}</p>
+            </div>
+          </ng-template>
+        </div>
+        <div class="song-message">
+          "Esta canción me recuerda a ti cada vez que la escucho..."
+        </div>
       </div>
     </div>
-  </div>
-  <div class="section-decoration bottom-decoration"></div>
-</section>
+    <div class="section-decoration bottom-decoration"></div>
+  </section>
 
   <!-- Drawing Board Section -->
   <section id="drawing" class="app-section">

@@ -1,0 +1,9 @@
+CODIGO PARA HACER ACTUALIZACIONES AL DIST
+
+ng build --configuration production
+
+
+
+xcopy public\favicon.ico dist\ranita\browser\
+
+xcopy public\manifest.webmanifest dist\ranita\browser\

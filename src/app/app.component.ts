@@ -62,11 +62,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     'Porque junto a ti, hasta lo ordinario se vuelve extraordinario'
   ];
   
-  // Canción
+  // Canción (solo una, como solicitaste)
   song = {
     title: 'La que me gusta',
     artist: 'Los Amigos Invisibles',
-    spotifyId: '1TdaQqgKRbiFdO15q1kv6e', 
+    spotifyId: '1TdaQqgKRbiFdO15q1kv6e', // ID actualizado según el enlace proporcionado
     cover: 'https://i.scdn.co/image/ab67616d0000b273a26e7b5997e5ed5acdc9c1a7'
   };
   
@@ -708,17 +708,17 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.context.strokeStyle = '#2E8B57';
     this.context.stroke();
     
-// Dibujar hojas
-this.context.beginPath();
-this.context.ellipse(x + 15, y + 100, 20, 10, Math.PI / 6, 0, 2 * Math.PI);
-this.context.fillStyle = '#3CB371';
-this.context.fill();
-
-this.context.beginPath();
-this.context.ellipse(x - 15, y + 120, 18, 8, -Math.PI / 6, 0, 2 * Math.PI);
-this.context.fillStyle = '#3CB371';
-this.context.fill();
-
+    // Dibujar hojas
+    this.context.beginPath();
+    this.context.ellipse(x + 15, y + 100, 20, 10, Math.PI / 6, 0, 2 * Math.PI);
+    this.context.fillStyle = '#3CB371';
+    this.context.fill();
+    
+    this.context.beginPath();
+    this.context.ellipse(x - 15, y + 120, 18, 8, -Math.PI / 6, 0, 2 * Math.PI);
+    this.context.fillStyle = '#3CB371';
+    this.context.fill();
+    
 // Dibujar varios corazones pequeños como un ramo
 const heartPositions = [
   { dx: 0, dy: 0, size: 20, color: ['#ff4d6d', '#ff758f'] },
@@ -911,7 +911,7 @@ for (let i = 0; i < 12; i++) {
 // Manejar errores de carga de imágenes
 handleImageError(event: any): void {
 const imgElement = event.target;
-imgElement.src = 'assets/images/placeholder-image.jpg'; // Imagen de respaldo
+imgElement.src = '../assets/images/placeholder-image.jpg'; // Imagen de respaldo
 }
 
 // Método para instalar la PWA

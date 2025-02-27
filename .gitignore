@@ -1,10 +1,6 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+/dist/ranita/browser/*
+!/dist/ranita/browser/
 
 # Node
 /node_modules
@@ -28,7 +24,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
+# Angular
 /.angular/cache
 .sass-cache/
 /connect.lock
@@ -36,6 +32,11 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+
+# Miscellaneous
+/tmp
+/out-tsc
+/bazel-out
 
 # System files
 .DS_Store
